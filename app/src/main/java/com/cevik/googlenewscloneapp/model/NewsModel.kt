@@ -9,5 +9,6 @@ data class NewsModel(
     val channelName: String,
     val topic: String,
     val date: String,
+    val detail:String,
     val bigCard: Boolean = false
     )

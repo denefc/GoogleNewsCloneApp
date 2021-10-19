@@ -1,5 +1,6 @@
 package com.cevik.googlenewscloneapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -19,7 +20,10 @@ class MainActivity : AppCompatActivity() {
 
 
         val adapter=NewsListAdapter{ newsModel ->
-            Toast.makeText(this,newsModel.channelName,Toast.LENGTH_LONG).show()
+            val intent= Intent(this,DetailActivity::class.java).apply {
+                putExtra("name",newsModel.channelName)
+            }
+            startActivity(intent)
         }
         adapter.newsList=MockDataGenerator().generateNewsList(10)
 

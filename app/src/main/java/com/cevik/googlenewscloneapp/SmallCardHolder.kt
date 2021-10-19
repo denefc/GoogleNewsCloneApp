@@ -2,8 +2,8 @@ package com.cevik.googlenewscloneapp
 
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.cevik.googlenewscloneapp.model.NewsModel
 
@@ -24,14 +24,14 @@ class SmallCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         tvTopic.text = model.topic
         tvDate.text = model.date
 
-        val clContainer = itemView.findViewById<ConstraintLayout>(R.id.clContainer)
+        val lnContainer = itemView.findViewById<LinearLayout>(R.id.lnContainer)
 
 
 
 
 
 
-        clContainer.setOnClickListener {
+        lnContainer.setOnClickListener {
             onItemClickListener.invoke(model)
         }
     }
