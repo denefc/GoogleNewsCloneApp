@@ -3,13 +3,13 @@ package com.cevik.googlenewscloneapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
-import android.widget.Toast
+
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cevik.googlenewscloneapp.data.MockDataGenerator
 import com.cevik.googlenewscloneapp.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         val adapter=NewsListAdapter{ newsModel ->
             val intent= Intent(this,DetailActivity::class.java).apply {
                 putExtra("name",newsModel.channelName)
+                putExtra("detailTopic",newsModel.topic)
+                putExtra("detail",newsModel.detail)
             }
             startActivity(intent)
         }
@@ -30,6 +32,14 @@ class MainActivity : AppCompatActivity() {
         binding.rvList.adapter=adapter
         binding.rvList.layoutManager= LinearLayoutManager(this,RecyclerView.VERTICAL,false)
 
+        binding.covid.setOnClickListener {
+            val intent=Intent(this,CovidActivity::class.java)
+            startActivity(intent)
+
+        }
+
 
     }
 }
+
+

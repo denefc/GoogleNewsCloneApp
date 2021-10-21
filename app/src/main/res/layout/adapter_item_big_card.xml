@@ -4,13 +4,17 @@
     android:layout_width="match_parent"
     android:id="@+id/bgClContainer"
     android:clickable="true"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="5dp"
     android:focusable="true"
     android:background="?attr/selectableItemBackground"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/bgTvImage"
+        android:layout_marginHorizontal="20dp"
         android:layout_width="match_parent"
+        android:adjustViewBounds="true"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,14 +24,18 @@
     <TextView
         android:id="@+id/bgTvIndex"
         android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:text="1"
+        android:layout_marginRight="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bgTvImage" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@id/bgTvIndex"
         app:layout_constraintTop_toBottomOf="@id/bgTvImage">
