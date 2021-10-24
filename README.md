@@ -11,7 +11,7 @@ https://lottiefiles.com/21458-google-logo
 
 ![GooleGif](https://github.com/denefc/GoogleNewsCloneApp/blob/master/forReadMe/google_logo.gif)
 
-<h2The Purposey</h2>
+<h2>The Purpose</h2>
 <p>
 This project just about the learn new things and get the idea how clone existing things.
 </p>
