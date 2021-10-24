@@ -14,7 +14,7 @@ class DetailActivity : AppCompatActivity() {
 
 
         binding.detailChannelName.text=intent.getStringExtra("name")
-        binding.detailTopic.text=intent.getStringExtra("detaiTopic")
+        binding.detailTopic.text=intent.getStringExtra("detailTopic")
         binding.detailNews.text=intent.getStringExtra("detail")
 
         setSupportActionBar(binding.detailToolbar)
