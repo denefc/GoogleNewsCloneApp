@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoogleNewsCloneApp">
         <activity
-            android:name=".CovidActivity"
+            android:name=".view.CovidActivity"
             android:exported="true" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".view.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,10 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailActivity"
+            android:name=".view.DetailActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true"/>
     </application>
 

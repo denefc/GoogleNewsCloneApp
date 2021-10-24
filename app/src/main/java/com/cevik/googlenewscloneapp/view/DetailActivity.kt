@@ -1,16 +1,18 @@
-package com.cevik.googlenewscloneapp
+package com.cevik.googlenewscloneapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.cevik.googlenewscloneapp.R
 import com.cevik.googlenewscloneapp.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding=DataBindingUtil.setContentView<ActivityDetailBinding>(this,R.layout.activity_detail)
+        val binding=DataBindingUtil.setContentView<ActivityDetailBinding>(this,
+            R.layout.activity_detail
+        )
 
 
         binding.detailChannelName.text=intent.getStringExtra("name")

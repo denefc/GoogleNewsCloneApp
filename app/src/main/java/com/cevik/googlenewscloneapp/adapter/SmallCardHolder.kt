@@ -1,10 +1,11 @@
-package com.cevik.googlenewscloneapp
+package com.cevik.googlenewscloneapp.adapter
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.cevik.googlenewscloneapp.R
 import com.cevik.googlenewscloneapp.model.NewsModel
 
 class SmallCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

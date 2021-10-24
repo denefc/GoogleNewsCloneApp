@@ -1,8 +1,9 @@
-package com.cevik.googlenewscloneapp
+package com.cevik.googlenewscloneapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.cevik.googlenewscloneapp.R
 import com.cevik.googlenewscloneapp.model.NewsModel
 import com.cevik.googlenewscloneapp.model.NewsType
 

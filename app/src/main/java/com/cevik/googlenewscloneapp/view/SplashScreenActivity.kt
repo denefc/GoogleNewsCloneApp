@@ -1,8 +1,9 @@
-package com.cevik.googlenewscloneapp
+package com.cevik.googlenewscloneapp.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.cevik.googlenewscloneapp.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -18,7 +19,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.Main).launch {
             delay(5000L)
-            startActivity(Intent(this@SplashScreenActivity,MainActivity::class.java))
+            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
             finish()
         }
 
