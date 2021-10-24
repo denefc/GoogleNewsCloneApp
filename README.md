@@ -9,7 +9,7 @@ In lottiefiles has so many ready to use template so that you can use in your pro
 This is what I used for educate myself:
 https://lottiefiles.com/21458-google-logo
 
-![WeatherGif]()
+![GooleGif](https://github.com/denefc/GoogleNewsCloneApp/blob/master/forReadMe/google_logo.gif)
 
 <h2>Main Activity</h2>
 <p>
