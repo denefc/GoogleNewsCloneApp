@@ -13,9 +13,9 @@
     <ImageView
         android:id="@+id/bgTvImage"
         android:layout_marginHorizontal="20dp"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:adjustViewBounds="true"
-        android:layout_height="wrap_content"
+        android:layout_height="350dp"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

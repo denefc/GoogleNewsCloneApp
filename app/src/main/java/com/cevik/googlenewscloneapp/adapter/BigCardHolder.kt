@@ -7,6 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.cevik.googlenewscloneapp.R
 import com.cevik.googlenewscloneapp.model.NewsModel
+import com.squareup.picasso.Picasso
 
 
 class BigCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -20,10 +21,10 @@ class BigCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
         tvIndex.text = (position+1).toString()
-        tvImage.setImageResource(model.picture)
-        tvName.text = model.channelName
-        tvTopic.text = model.topic
-        tvDate.text = model.date
+        Picasso.get().load(model.image).into(tvImage)
+        tvName.text=model.author
+        tvTopic.text=model.title
+        tvDate.text=model.published
 
 
         val clContainer = itemView.findViewById<ConstraintLayout>(R.id.bgClContainer)

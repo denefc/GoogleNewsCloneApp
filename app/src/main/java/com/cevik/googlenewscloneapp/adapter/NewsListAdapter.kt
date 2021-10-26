@@ -2,10 +2,12 @@ package com.cevik.googlenewscloneapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Filter
 import androidx.recyclerview.widget.RecyclerView
 import com.cevik.googlenewscloneapp.R
 import com.cevik.googlenewscloneapp.model.NewsModel
 import com.cevik.googlenewscloneapp.model.NewsType
+
 
 class NewsListAdapter(private val onItemClickListener:(NewsModel)->Unit):RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var newsList:List<NewsModel> = arrayListOf()
@@ -30,8 +32,9 @@ class NewsListAdapter(private val onItemClickListener:(NewsModel)->Unit):Recycle
         return viewHolder
     }
 
+
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when(newsList[position].bigCard){
+        when(position%6==0){
             true-> (holder as BigCardHolder).bind(newsList[position],position,onItemClickListener)
             false-> (holder as SmallCardHolder).bind(newsList[position],position,onItemClickListener)
 
@@ -42,9 +45,11 @@ class NewsListAdapter(private val onItemClickListener:(NewsModel)->Unit):Recycle
     override fun getItemCount(): Int =newsList.size
 
     override fun getItemViewType(position: Int): Int {
-        return when(newsList[position].bigCard){
+        return when(position%6==0){
             true ->NewsType.BIG_CARD_TYPE.value
             false ->NewsType.SMALL_CARD_TYPE.value
         }
     }
+
+
 }

@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cevik.googlenewscloneapp.R
 import com.cevik.googlenewscloneapp.model.NewsModel
+import com.squareup.picasso.Picasso
 
 class SmallCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(model: NewsModel, position: Int, onItemClickListener: (NewsModel) -> Unit) {
@@ -20,10 +21,11 @@ class SmallCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
         tvIndex.text = (position+1).toString()
-        tvImage.setImageResource(model.picture)
-        tvName.text = model.channelName
-        tvTopic.text = model.topic
-        tvDate.text = model.date
+        Picasso.get().load(model.image).into(tvImage)
+        tvName.text=model.author
+        tvTopic.text=model.title
+        tvDate.text=model.published
+
 
         val lnContainer = itemView.findViewById<LinearLayout>(R.id.lnContainer)
 
